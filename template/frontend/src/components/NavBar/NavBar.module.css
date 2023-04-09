@@ -1,0 +1,316 @@
+/*.Navbar {
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  height: 70px;
+  width: 100%;
+  background: var(--first);
+}
+.Navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  padding: 0px;
+}
+.Navbar ul li:not(:last-child) {
+  margin-right: 15px;
+}
+.Navbar ul a {
+  padding: 5px 10px;
+  font-size: 20px;
+  display: inline-block;
+  width: 140px;
+  text-align: center;
+  color: var(--third);
+  background: var(--second);
+  border-radius: 5px;
+  text-decoration: none;
+  border: 2px solid var(--third);
+  transition: border 0.1s ease-in-out;
+}
+
+.Navbar ul a:hover {
+  border: 2px solid white;
+}
+
+.Navbar ul a.active {
+  background: var(--first) !important;
+}
+*/
+
+.topNav {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  position: fixed;
+  z-index: 99;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0 0px 10px 0 rgba(114, 114, 114, 0.1),
+    0 0px 10px 0 rgba(60, 60, 60, 0.1);
+  user-select: none;
+}
+
+.topNav .logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  position: relative;
+  height: 100%;
+}
+
+.topNav .logoContainer .logo {
+  position: relative;
+  top: 0%;
+  transform: translateY(0%);
+  left: 0px;
+  width: 50px;
+  background: ;
+  display: flex;
+  justify-content: center;
+
+  border-radius: 0px 0px 0px 0px;
+}
+
+.topNav .logoContainer .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.topNav .mainLinks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin-top: 0px;
+  align-items: center;
+  align-self: center;
+  height: 100%;
+  padding: 0px;
+}
+
+.topNav .mainLinks a {
+  height: 100%;
+  text-decoration: none;
+  padding: 3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  position: relative;
+}
+.topNav .mainLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 2px;
+  background-color: #43007e;
+}
+.topNav .mainLinks a .color {
+  display: none;
+}
+.topNav .mainLinks a.active .color {
+  display: block;
+}
+.topNav .mainLinks a.active .nocolor {
+  display: none;
+}
+.topNav .mainLinks a:hover {
+  background-color: #43007e1f;
+}
+
+.topNav .mainLinks a:not(:last-child) {
+  margin-right: 2px;
+}
+
+.topNav .mainLinks a .img {
+  width: 37px;
+}
+.topNav .mainLinks a .img img {
+  width: 100%;
+}
+.topNav .rightLinks {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.topNav .rightLinks > div {
+  padding: 0px 15px;
+  box-sizing: content-box;
+
+  position: relative;
+}
+.topNav .rightLinks > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80%;
+  background-color: #43007e;
+}
+.topNav .rightLinks .search {
+  width: 26px;
+}
+
+.topNav .rightLinks .notification {
+  width: 26px;
+}
+
+.topNav .rightLinks img {
+  width: 100%;
+}
+
+.topNav .rightLinks a {
+  color: #43007e;
+}
+
+.topNav .rightLinks .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.topNav .rightLinks .profile .img {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #43007e9a;
+  padding: 1px;
+  overflow: hidden;
+}
+.topNav .rightLinks .profile .img img{
+  object-fit: cover;
+  z-index: -1;
+}
+
+.topNav .rightLinks .profile .arrow.down {
+  border: solid #43007e;
+  margin-left: 8px;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.topNav .rightLinks .profile .img img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.topNav .rightLinks .profile .linkArrow {
+  position: absolute;
+  right: 5%;
+  bottom: 0%;
+  transform: translateX(-50%);
+  width: 0px;
+  height: 0px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+
+  border-bottom: 7px solid #ffffff;
+  box-shadow: 0 2px 24px 0 rgba(114, 114, 114, 0.1),
+    0 2px 24px 0 rgba(60, 60, 60, 0.1);
+}
+
+.topNav .rightLinks .profile .profileLinks {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background-color: #ffffff;
+  padding: 0px;
+  opacity: 0;
+
+  display: none;
+  transform: translateY(-3%);
+  transition: 0.2s ease;
+  z-index: -999;
+  box-shadow: 0 2px 24px 0 rgba(114, 114, 114, 0.1),
+    0 2px 24px 0 rgba(60, 60, 60, 0.1);
+}
+.topNav .rightLinks .profile .profileLinks.active {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.topNav .rightLinks .profile .profileLinks ul {
+  width: 220px;
+  list-style: none;
+  background-color: #ffffff;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding: 10px 0px;
+}
+.topNav .rightLinks .profile .profileLinks .main {
+  padding: 8px 5px;
+  border-bottom: 1px solid #43007e;
+  background-color: #43007e;
+  text-align: center;
+}
+
+.topNav .rightLinks .profile .profileLinks .main a {
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+}
+
+.topNav .rightLinks .profile .profileLinks ul li {
+  padding: 7px 5px;
+  font-size: 14px;
+  position: relative;
+}
+
+.topNav .rightLinks .profile .profileLinks ul li::after {
+  content: "";
+  height: 100%;
+  width: 3px;
+  background-color: #43007e;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: none;
+}
+
+.topNav .rightLinks .profile .profileLinks ul li:hover {
+  background-color: #43007e1f;
+}
+
+.topNav .rightLinks .profile .profileLinks ul li:hover::after {
+  display: block;
+}
+.topNav .rightLinks .profile .profileLinks ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: rgb(31, 30, 30);
+  text-decoration: none;
+}
+.topNav .rightLinks .profile .profileLinks ul li a img {
+  width: 28px;
+  margin-right: 7px;
+}

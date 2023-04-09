@@ -1,0 +1,24 @@
+.Heading {
+  text-align: center;
+  margin: 0px 0px;
+  color: black;
+  padding: 15px;
+  font-size: 35px;
+}
+
+.Form {
+  width: 80%;
+  margin: 30px auto;
+}
+.Form label {
+  color: #43007e;
+}
+
+.Button {
+  background: #43007e;
+  color: white;
+}
+.Button:hover {
+  background-color: var(--third);
+  color: var(--first);
+}

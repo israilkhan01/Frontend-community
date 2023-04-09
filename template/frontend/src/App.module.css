@@ -1,0 +1,23 @@
+/*:root {
+  --first: rgb(172, 172, 172);
+  --second: rgb(21, 18, 15);
+  --third: rgb(255, 255, 255);
+}
+*/
+:root {
+  --first: rgb(40, 40, 39);
+  --second: rgb(10, 117, 142);
+
+  --third: rgb(255, 255, 255);
+}
+body {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
